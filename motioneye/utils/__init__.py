@@ -193,7 +193,7 @@ def get_disk_usage(path):
 def is_local_motion_camera(config):
     """Tells if a camera is managed by the local motion instance."""
     return bool(
-        config.get('videodevice')
+        config.get('video_device')
         or config.get('netcam_url')
         or config.get('mmalcam_name')
     )
@@ -206,7 +206,7 @@ def is_remote_camera(config):
 
 def is_v4l2_camera(config):
     """Tells if a camera is a v4l2 device managed by the local motion instance."""
-    return bool(config.get('videodevice'))
+    return bool(config.get('video_device'))
 
 
 def is_mmal_camera(config):
